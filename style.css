@@ -1,0 +1,89 @@
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* Gneral CSS */
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* eneral CSS end */
+
+header {
+width: 100%;
+min-height: 75px;
+background-color: rgb(31, 30, 30);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0px 50px;
+}
+
+
+.logoContainer img {
+    width: 75px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+.navLink {
+    color: rgb(110, 105, 105);
+}
+.navLink:hover {
+    color: #fff;
+}
+#menuCheck {
+    display: none;
+}
+
+#menuLabel {
+    display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    header {
+        padding: 0px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        display: none;
+        gap: 0px;
+    }
+    #menuCheck {
+        display: block;
+        visibility: hidden;
+    }
+    #menuLabel {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        color: #fff;
+    }
+    #menuCheck:checked+ul {
+        display: flex;
+        flex-direction: column;
+    }
+    nav {
+        width: 100%;
+    }
+    .navLi {
+        width: 100%;
+        text-align: center;
+        padding: 5px 0px;
+    }
+}
